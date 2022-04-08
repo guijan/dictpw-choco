@@ -1,0 +1,1 @@
+﻿Uninstall-BinFile -name $packageName
