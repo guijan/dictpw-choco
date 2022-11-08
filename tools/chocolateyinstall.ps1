@@ -5,8 +5,8 @@ $ver = $env:ChocolateyPackageVersion
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  url           = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-mingw32.exe"
-  url64bit      = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-mingw64.exe"
+  url           = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x86.exe"
+  url64bit      = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x64.exe"
   softwareName  = 'dictpw'
 
   checksum      = 'cf4a0af1de855053dc5ef389b2d94bed62c68e9340e7ba52ba374a5f7c21373f'
