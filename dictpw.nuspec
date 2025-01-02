@@ -3,23 +3,23 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dictpw</id>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <packageSourceUrl>https://github.com/guijan/dictpw-choco/</packageSourceUrl>
     <owners>Guilherme Janczak</owners>
     <title>dictpw (Install)</title>
     <authors>Guilherme Janczak</authors>
     <projectUrl>https://github.com/guijan/dictpw/</projectUrl>
-    <copyright>Copyright (c) 2021-2022 Guilherme Janczak</copyright>
+    <copyright>Copyright (c) 2021-2025 Guilherme Janczak</copyright>
     <licenseUrl>https://github.com/guijan/dictpw/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/guijan/dictpw/</projectSourceUrl>
     <bugTrackerUrl>https://github.com/guijan/dictpw/issues/</bugTrackerUrl>
     <tags>dictpw foss cli cross-platform multiplatform security password-generator random password</tags>
     <summary>generate password from dictionary</summary>
-    <releaseNotes>See all - https://github.com/guijan/dictpw/releases/tag/v1.2.0</releaseNotes>
-    <description>Dictpw randomly picks 5 words off a 7776-word dictionary and prints them with a dot between each word. This is the Diceware method of password generation from the command line.</description>
+    <releaseNotes>See all - https://github.com/guijan/dictpw/releases/tag/v1.3.0</releaseNotes>
+    <description>Dictpw randomly picks 4 words off a 7776-word dictionary and prints them with a dot between each word. This is the Diceware method of password generation from the command line.</description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

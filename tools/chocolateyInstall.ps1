@@ -4,22 +4,22 @@ $ver = $env:ChocolateyPackageVersion
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
-  url           = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x86.exe"
-  url64bit      = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x64.exe"
+  silentArgs    = '/VERYSILENT /ALLUSERS /SUPPRESSMSGBOXES' `
+                  + '"/MERGETASKS=!stationary\env_path"' # Don't add to PATH
   softwareName  = 'dictpw'
 
-  checksum      = 'cf4a0af1de855053dc5ef389b2d94bed62c68e9340e7ba52ba374a5f7c21373f'
+  url           = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x86.exe"
+  url64bit      = "https://github.com/guijan/dictpw/releases/download/v${ver}/setup-dictpw-${ver}-x64.exe"
+
+  checksum    = 'a3f3341bfd8d69bb758b363e4e0523cc10bfe3049061dc812146910f26f5fd1b'
   checksumType  = 'sha256'
-  checksum64    = '78224a2cefc00d7440410ad507fa2625e046a39fc2d1837068c3a1efb781096b'
+  checksum64      = '31b802365dc494f780bd959d1254c39e9d274fedb28eba275fbb5c33b0f463c6'
   checksumType64= 'sha256'
 
-  silentArgs   = '/S'
 }
 
 Install-ChocolateyPackage @packageArgs
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if (!$installLocation)  {  Write-Warning "Can't find $PackageName install location"; return }
 Install-Binfile -Name $packageName -Path "$installLocation/bin/dictpw.exe"
 Write-Host "$packageName installed to '$installLocation'"
